@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen QCM</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>UNIVERSITÉ IBN TOFAIL</h1>
+        <h2>Faculté des Sciences</h2>
+        <p>Année 2023-2024 | Filière : SMI S3 | Durée : 1h30</p>
+    </header>
+
+    <main>
+        <section id="informations">
+            <h3>Informations</h3>
+            <form>
+                <label for="nom">Nom et Prénom :</label>
+                <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required><br>
+
+                <label for="apogee">N° Apogée :</label>
+                <input type="text" id="apogee" name="apogee" placeholder="Entrez votre numéro" required><br>
+            </form>
+        </section>
+
+        <section id="questions">
+            <h3>Examen Final - Programmation I</h3>
+
+            <!-- Question 1 -->
+            <div class="question">
+                <p>1. Laquelle parmi ces déclarations n'est pas correcte en langage C ?</p>
+                <label><input type="radio" name="q1" value="A"> A. string ch;</label><br>
+                <label><input type="radio" name="q1" value="B"> B. char* ch;</label><br>
+                <label><input type="radio" name="q1" value="C"> C. float ch=5e3;</label><br>
+                <label><input type="radio" name="q1" value="D"> D. A et C</label>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <p>2. Si abcdefg est l'entrée du programme, le résultat sera :</p>
+                <pre><code>
+#include <stdio.h>
+int f(char s[]) {
+    puts(s);
+}
+int main() {
+    char ch[10], *p=ch;
+    scanf("%s", ch);
+    f(&ch[4]);
+    return 0;
+}
+                </code></pre>
+                <label><input type="radio" name="q2" value="A"> A. abcd</label><br>
+                <label><input type="radio" name="q2" value="B"> B. de fg</label><br>
+                <label><input type="radio" name="q2" value="C"> C. efg</label><br>
+                <label><input type="radio" name="q2" value="D"> D. Aucune des autres réponses n'est correcte</label>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+                <p>3. Qu'affiche le programme suivant ?</p>
+                <pre><code>
+#include <stdio.h>
+int main() {
+    int a=1, b=2, c=3;
+    printf("%d", a+= (a+=3,5, a));
+    return 0;
+}
+                </code></pre>
+                <label><input type="radio" name="q3" value="A"> A. 5</label><br>
+                <label><input type="radio" name="q3" value="B"> B. 8</label><br>
+                <label><input type="radio" name="q3" value="C"> C. 11</label><br>
+                <label><input type="radio" name="q3" value="D"> D. Erreur de compilation</label>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+                <p>4. Utiliser le code ci-dessous pour les questions 4 et 5.</p>
+                <pre><code>
+#include <stdio.h>
+int f(int m) {
+    int d = 0;
+    switch (m % 2) {
+        case 0: d = 32; break;
+        case 1: d = m==2?30:28;
+    }
+    return d;
+}
+int main() {
+    int i;
+    int num = 1;
+    for (i=0;i<5;i++)
+        num += f(i);
+    printf("num: %d\n", num);
+    return 0;
+}
+                </code></pre>
+                <p>Laquelle des réponses suivantes est le résultat de l'instruction printf?</p>
+                <label><input type="radio" name="q4" value="A"> A. num: 151</label><br>
+                <label><input type="radio" name="q4" value="B"> B. num: 152</label><br>
+                <label><input type="radio" name="q4" value="C"> C. num: 153</label><br>
+                <label><input type="radio" name="q4" value="D"> D. num: 154</label>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+                <p>5. Quelle bibliothèque en C est utilisée pour gérer les entrées/sorties ?</p>
+                <label><input type="radio" name="q5" value="A"> A. stdlib.h</label><br>
+                <label><input type="radio" name="q5" value="B"> B. stdio.h</label><br>
+                <label><input type="radio" name="q5" value="C"> C. math.h</label><br>
+                <label><input type="radio" name="q5" value="D"> D. string.h</label>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question">
+                <p>6. Quel est le résultat de l'expression `7 % 3` en C ?</p>
+                <label><input type="radio" name="q6" value="A"> A. 1</label><br>
+                <label><input type="radio" name="q6" value="B"> B. 2</label><br>
+                <label><input type="radio" name="q6" value="C"> C. 3</label><br>
+                <label><input type="radio" name="q6" value="D"> D. 7</label>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question">
+                <p>7. Quelle est la fonction utilisée pour allouer de la mémoire dynamiquement en C ?</p>
+                <label><input type="radio" name="q7" value="A"> A. malloc</label><br>
+                <label><input type="radio" name="q7" value="B"> B. free</label><br>
+                <label><input type="radio" name="q7" value="C"> C. realloc</label><br>
+                <label><input type="radio" name="q7" value="D"> D. calloc</label>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question">
+                <p>8. Quelle est la différence entre `malloc` et `calloc` en C ?</p>
+                <label><input type="radio" name="q8" value="A"> A. `malloc` initialise la mémoire à zéro</label><br>
+                <label><input type="radio" name="q8" value="B"> B. `calloc` initialise la mémoire à zéro</label><br>
+                <label><input type="radio" name="q8" value="C"> C. Les deux font la même chose</label><br>
+                <label><input type="radio" name="q8" value="D"> D. Aucune des réponses</label>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="question">
+                <p>9. Quelle est la fonction utilisée pour libérer de la mémoire allouée dynamiquement en C ?</p>
+                <label><input type="radio" name="q9" value="A"> A. malloc</label><br>
+                <label><input type="radio" name="q9" value="B"> B. free</label><br>
+                <label><input type="radio" name="q9" value="C"> C. realloc</label><br>
+                <label><input type="radio" name="q9" value="D"> D. calloc</label>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="question">
+                <p>10. Quelle est la fonction utilisée pour copier une chaîne de caractères en C ?</p>
+                <label><input type="radio" name="q10" value="A"> A. strcpy</label><br>
+                <label><input type="radio" name="q10" value="B"> B. strcat</label><br>
+                <label><input type="radio" name="q10" value="C"> C. strlen</label><br>
+                <label><input type="radio" name="q10" value="D"> D. strcmp</label>
+            </div>
+
+            <!-- Question 11 -->
+            <div class="question">
+                <p>11. Quelle est la fonction utilisée pour concaténer deux chaînes de caractères en C ?</p>
+                <label><input type="radio" name="q11" value="A"> A. strcpy</label><br>
+                <label><input type="radio" name="q11" value="B"> B. strcat</label><br>
+                <label><input type="radio" name="q11" value="C"> C. strlen</label><br>
+                <label><input type="radio" name="q11" value="D"> D. strcmp</label>
+            </div>
+
+            <!-- Question 12 -->
+            <div class="question">
+                <p>12. Qu'affiche le programme suivant :</p>
+                <pre><code>
+#include <stdio.h>
+int main() {
+    int k=5, *p=&k, **q=&p;
+    printf("%d %d %d", k, *p, **p);
+    return 0;
+}
+                </code></pre>
+                <label><input type="radio" name="q12" value="A"> A. 5 5 5</label><br>
+                <label><input type="radio" name="q12" value="B"> B. 5 5 indéterminé</label><br>
+                <label><input type="radio" name="q12" value="C"> C. 5 indéterminé indéterminé</label><br>
+                <label><input type="radio" name="q12" value="D"> D. Erreur de compilation</label>
+            </div>
+
+            <!-- Question 13 -->
+            <div class="question">
+                <p>13. Si `c` est une variable de type `char`, laquelle des instructions suivantes est incorrecte ?</p>
+                <label><input type="radio" name="q13" value="A"> A. i += c; /* i de type int */</label><br>
+                <label><input type="radio" name="q13" value="B"> B. c=2*c-1;</label><br>
+                <label><input type="radio" name="q13" value="C"> C. printf(c);</label><br>
+                <label><input type="radio" name="q13" value="D"> D. putchar(c);</label>
+            </div>
+
+            <!-- Question 14 -->
+            <div class="question">
+                <p>14. Supposons que `t` soit un tableau `int` à une dimension et que `p` soit un pointeur sur un `int`. Supposons que `p = t` vient d'être effectuée. Laquelle des expressions suivantes est incorrecte ?</p>
+                <label><input type="radio" name="q14" value="A"> A. p == &t[0]</label><br>
+                <label><input type="radio" name="q14" value="B"> B. *p == t[0]</label><br>
+                <label><input type="radio" name="q14" value="C"> C. p=t[0]</label><br>
+                <label><input type="radio" name="q14" value="D"> D. p[0] == t[0]</label>
+            </div>
+
+            <!-- Question 15 -->
+            <div class="question">
+                <p>15. Qu'affiche le programme suivant :</p>
+                <pre><code>
+#include <stdio.h>
+union Stu {
+    int na;
+    char m;
+};
+int main() {
+    union Stu s;
+    printf("%d", sizeof(s));
+    return 0;
+}
+                </code></pre>
+                <label><input type="radio" name="q15" value="A"> A. 4</label><br>
+                <label><input type="radio" name="q15" value="B"> B. 5</label><br>
+                <label><input type="radio" name="q15" value="C"> C. 8</label><br>
+                <label><input type="radio" name="q15" value="D"> D. 9</label>
+            </div>
+
+            <!-- Question 16 -->
+            <div class="question">
+                <p>16. Qu'affiche le programme suivant ?</p>
+                <pre><code>
+#include <stdio.h>
+void h(int x, int y) {
+    y = y + 10;
+    *x -= y;
+}
+int main() {
+    int v1 = 22, v2 = 23;
+    h(&v1, v2);
+    h(&v2, v1);
+    printf("%d", v1 + v2);
+    return 0;
+}
+                </code></pre>
+                <label><input type="radio" name="q16" value="A"> A. 11</label><br>
+                <label><input type="radio" name="q16" value="B"> B. 13</label><br>
+                <label><input type="radio" name="q16" value="C"> C. 15</label><br>
+                <label><input type="radio" name="q16" value="D"> D. aucune des autres réponses n'est correcte</label>
+            </div>
+
+            <!-- Question 17 -->
+            <div class="question">
+                <p>17. Quelle opération est utilisée pour supprimer un nœud au début d'une liste chaînée simple ?</p>
+                <label><input type="radio" name="q17" value="A"> A. free(tete);</label><br>
+                <label><input type="radio" name="q17" value="B"> B. tete = tete->suiv;</label><br>
+                <label><input type="radio" name="q17" value="C"> C. tete->suiv = null;</label><br>
+                <label><input type="radio" name="q17" value="D"> D. tete = null;</label>
+            </div>
+
+            <!-- Question 18 -->
+            <div class="question">
+                <p>18. Qu'affiche le programme suivant ?</p>
+                <pre><code>
+#include <stdio.h>
+void f(int **ptr2, int **ptr1) {
+    int *ii;
+    ii = *ptr2;
+    *ptr2 = *ptr1;
+    *ptr1 = ii;
+    **ptr1 += 5;
+    **ptr2 *= 2;
+}
+int main() {
+    int v1 = 5, v2 = 10;
+    int *p1 = &v1, *p2 = &v2;
+    f(&p1, &p2);
+    printf("%d %d", v2, v1);
+    return 0;
+}
+                </code></pre>
+                <label><input type="radio" name="q18" value="A"> A. 20 10</label><br>
+                <label><input type="radio" name="q18" value="B"> B. 10 20</label><br>
+                <label><input type="radio" name="q18" value="C"> C. 10 10</label><br>
+                <label><input type="radio" name="q18" value="D"> D. 20 20</label>
+            </div>
+
+            <!-- Question 19 -->
+            <div class="question">
+                <p>19. Quelle est la déclaration de structure utilisée pour définir un nœud d'une liste chaînée simple en C ?</p>
+                <label><input type="radio" name="q19" value="A"> A. struct Noeud { int info; };</label><br>
+                <label><input type="radio" name="q19" value="B"> B. struct Noeud { int info; struct Noeud suiv; };</label><br>
+                <label><input type="radio" name="q19" value="C"> C. struct Noeud { int info; struct Noeud* suiv; };</label><br>
+                <label><input type="radio" name="q19" value="D"> D. struct Noeud { int info; Noeud* suiv; };</label>
+            </div>
+
+            <!-- Question 20 -->
+            <div class="question">
+                <p>20. Qu'affiche le programme suivant :</p>
+                <pre><code>
+#include <stdio.h>
+#define N 10
+int main() {
+    #ifndef N
+    #undef N
+    #else
+    #define N 20
+    #endif
+    printf("%d", N);
+    return 0;
+}
+                </code></pre>
+                <label><input type="radio" name="q20" value="A"> A. 10</label><br>
+                <label><input type="radio" name="q20" value="B"> B. 20</label><br>
+                <label><input type="radio" name="q20" value="C"> C. 1020</label><br>
+                <label><input type="radio" name="q20" value="D"> D. Erreur de compilation</label>
+            </div>
+
+            <!-- Ajouter plus de questions ici -->
+        </section>
+
+        <section id="remarques">
+            <h3>Remarques</h3>
+            <textarea id="remarques" name="remarques" placeholder="Ajoutez vos remarques ici"></textarea>
+        </section>
+
+        <button type="submit">Envoyer les réponses</button>
+    </main>
+
+    <footer>
+        <p>Département d'Informatique - Kénitra</p>
+    </footer>
+</body>
+</html>
