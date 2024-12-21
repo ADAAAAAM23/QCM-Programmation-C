@@ -11,7 +11,7 @@
     <header>
         <h1>UNIVERSITÉ IBN TOFAIL</h1>
         <h2>Faculté des Sciences</h2>
-        <p>Année 2023-2024 | Filière : SMI S3 | Durée : 1h30</p>
+        <p>Année 2023-2024 | Filière : SMI S3 </p>
     </header>
 
     <main>
@@ -42,7 +42,8 @@
             <div class="question">
                 <p>2. Si abcdefg est l'entrée du programme, le résultat sera :</p>
                 <pre><code>
-#include <stdio.h>
+                    
+#include < stdio.h>
 int f(char s[]) {
     puts(s);
 }
@@ -54,7 +55,7 @@ int main() {
 }
                 </code></pre>
                 <label><input type="radio" name="q2" value="A"> A. abcd</label><br>
-                <label><input type="radio" name="q2" value="B"> B. de fg</label><br>
+                <label><input type="radio" name="q2" value="B"> B. defg</label><br>
                 <label><input type="radio" name="q2" value="C"> C. efg</label><br>
                 <label><input type="radio" name="q2" value="D"> D. Aucune des autres réponses n'est correcte</label>
             </div>
@@ -63,7 +64,7 @@ int main() {
             <div class="question">
                 <p>3. Qu'affiche le programme suivant ?</p>
                 <pre><code>
-#include <stdio.h>
+#include < stdio.h>
 int main() {
     int a=1, b=2, c=3;
     printf("%d", a+= (a+=3,5, a));
@@ -80,7 +81,7 @@ int main() {
             <div class="question">
                 <p>4. Utiliser le code ci-dessous pour les questions 4 et 5.</p>
                 <pre><code>
-#include <stdio.h>
+#include < stdio.h>
 int f(int m) {
     int d = 0;
     switch (m % 2) {
@@ -92,7 +93,7 @@ int f(int m) {
 int main() {
     int i;
     int num = 1;
-    for (i=0;i<5;i++)
+    for (i=0;i< 5;i++)
         num += f(i);
     printf("num: %d\n", num);
     return 0;
@@ -172,7 +173,7 @@ int main() {
             <div class="question">
                 <p>12. Qu'affiche le programme suivant :</p>
                 <pre><code>
-#include <stdio.h>
+#include < stdio.h>
 int main() {
     int k=5, *p=&k, **q=&p;
     printf("%d %d %d", k, *p, **p);
@@ -207,7 +208,7 @@ int main() {
             <div class="question">
                 <p>15. Qu'affiche le programme suivant :</p>
                 <pre><code>
-#include <stdio.h>
+#include < stdio.h>
 union Stu {
     int na;
     char m;
@@ -228,7 +229,7 @@ int main() {
             <div class="question">
                 <p>16. Qu'affiche le programme suivant ?</p>
                 <pre><code>
-#include <stdio.h>
+#include < stdio.h>
 void h(int x, int y) {
     y = y + 10;
     *x -= y;
@@ -260,7 +261,7 @@ int main() {
             <div class="question">
                 <p>18. Qu'affiche le programme suivant ?</p>
                 <pre><code>
-#include <stdio.h>
+#include < stdio.h>
 void f(int **ptr2, int **ptr1) {
     int *ii;
     ii = *ptr2;
@@ -283,20 +284,13 @@ int main() {
                 <label><input type="radio" name="q18" value="D"> D. 20 20</label>
             </div>
 
-            <!-- Question 19 -->
-            <div class="question">
-                <p>19. Quelle est la déclaration de structure utilisée pour définir un nœud d'une liste chaînée simple en C ?</p>
-                <label><input type="radio" name="q19" value="A"> A. struct Noeud { int info; };</label><br>
-                <label><input type="radio" name="q19" value="B"> B. struct Noeud { int info; struct Noeud suiv; };</label><br>
-                <label><input type="radio" name="q19" value="C"> C. struct Noeud { int info; struct Noeud* suiv; };</label><br>
-                <label><input type="radio" name="q19" value="D"> D. struct Noeud { int info; Noeud* suiv; };</label>
-            </div>
+     
 
             <!-- Question 20 -->
             <div class="question">
-                <p>20. Qu'affiche le programme suivant :</p>
+                <p>19. Qu'affiche le programme suivant :</p>
                 <pre><code>
-#include <stdio.h>
+#include < stdio.h>
 #define N 10
 int main() {
     #ifndef N
@@ -327,6 +321,8 @@ int main() {
 
     <footer>
         <p>Département d'Informatique - Kénitra</p>
+        <p>adam.elaouane@uit.ac.ma</p>
     </footer>
 </body>
 </html>
+
