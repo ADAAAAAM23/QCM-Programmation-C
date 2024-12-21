@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', function () {
         q16: 'B',
         q17: 'B',
         q18: 'B',
-        q19: 'C',
-        q20: 'B',
+        q19: 'B',
+        
         // Ajouter les bonnes réponses ici pour chaque question ajoutée
     };
 
